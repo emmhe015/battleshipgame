@@ -51,5 +51,12 @@ def get_guess():
             print("Invalid input. Please enter integers.")
 
 def is_valid_guess(guess, size):
+    """
+    Checks if a guess is within the bounds of the grid.
+    guess (tuple): A tuple containing the row and column guessed.
+    size (int): The size of the grid.
+    Returns:
+    bool: True if the guess is within bounds, False otherwise.
+    """
     row, col = guess
     return 0 <= row < size and 0 <= col < size
