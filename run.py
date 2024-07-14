@@ -18,3 +18,5 @@ def print_board(board):
     """
     for row in board:
         print(" ".join(row))
+
+def place_ships(board, size, num_ships):
