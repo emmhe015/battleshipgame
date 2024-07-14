@@ -62,6 +62,13 @@ def is_valid_guess(guess, size):
     return 0 <= row < size and 0 <= col < size
 
 def make_guess(board, guess):
+    """
+    Processes the user's guess and updates the board.
+    board (list): The game board to update.
+    guess (tuple): A tuple containing the row and column guessed.
+    Returns:
+    bool: True if the guess hits a ship, False otherwise.
+    """
     row, col = guess
     if board[row][col] == "S":
         board[row][col] = "X"
