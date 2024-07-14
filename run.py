@@ -49,3 +49,5 @@ def get_guess():
             return row, col
         except ValueError:
             print("Invalid input. Please enter integers.")
+
+def is_valid_guess(guess, size):
