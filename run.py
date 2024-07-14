@@ -36,3 +36,10 @@ def place_ships(board, size, num_ships):
 
 
 def get_guess():
+    while True:
+        try:
+            row = int(input("Guess Row: "))
+            col = int(input("Guess Col: "))
+            return row, col
+        except ValueError:
+            print("Invalid input. Please enter integers.")
