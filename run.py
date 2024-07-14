@@ -62,3 +62,10 @@ def is_valid_guess(guess, size):
     return 0 <= row < size and 0 <= col < size
 
 def make_guess(board, guess):
+    row, col = guess
+    if board[row][col] == "S":
+        board[row][col] = "X"
+        return True
+    elif board[row][col] == "O":
+        board[row][col] = "-"
+        return False
