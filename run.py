@@ -60,3 +60,5 @@ def is_valid_guess(guess, size):
     """
     row, col = guess
     return 0 <= row < size and 0 <= col < size
+
+def make_guess(board, guess):
