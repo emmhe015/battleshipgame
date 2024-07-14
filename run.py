@@ -33,3 +33,6 @@ def place_ships(board, size, num_ships):
         if board[ship_row][ship_col] != "S":
             board[ship_row][ship_col] = "S"
             ships += 1
+
+
+def get_guess():
