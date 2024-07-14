@@ -36,6 +36,12 @@ def place_ships(board, size, num_ships):
 
 
 def get_guess():
+    """
+    Prompts the user for a row and column guess.
+    
+    Returns:
+    tuple: A tuple containing the row and column guessed by the user.
+    """
     while True:
         try:
             row = int(input("Guess Row: "))
