@@ -105,3 +105,7 @@ def main():
 
     player_board = create_board(size)
     computer_board = create_board(size)
+
+    num_ships = 3
+    place_ships(player_board, size, num_ships)
+    place_ships(computer_board, size, num_ships)
