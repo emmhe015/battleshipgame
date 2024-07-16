@@ -113,3 +113,9 @@ def main():
     while True:
         print("\nPlayer's Board:")
         print_board(player_board)
+        print("\nPlayer's Turn:")
+        while True:
+            player_guess = get_guess()
+            if not is_valid_guess(player_guess, size):
+                print("Guess out of bounds! Try again.")
+                continue
