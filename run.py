@@ -96,3 +96,9 @@ def main():
     while True:
         try:
             size = int(input("Enter the size of the grid: "))
+            if size<= 0:
+                print("Please enter a positive integer.")
+                continue
+            break
+        except ValueError:
+            print("Invalid input. Please enter an integer.")
