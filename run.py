@@ -78,6 +78,12 @@ def make_guess(board, guess):
         return False
 
 def all_ships_sunk(board):
+    """
+    Checks if all ships on the board have been sunk.
+    board (list): The game board to check.
+    Returns:
+    bool: True if all ships are sunk, False otherwise.
+    """
     for row in board:
         if "S" in row:
             return False
