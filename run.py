@@ -131,3 +131,4 @@ def main():
 
         print("\nComputer's Turn:")
         while True:
+            computer_guess = (random.randint(0, size-1), random.randint(0, size-1))
