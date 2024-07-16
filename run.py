@@ -78,4 +78,8 @@ def make_guess(board, guess):
         return False
 
 def all_ships_sunk(board):
+    for row in board:
+        if "S" in row:
+            return False
+    return True
 
