@@ -102,3 +102,6 @@ def main():
             break
         except ValueError:
             print("Invalid input. Please enter an integer.")
+
+    player_board = create_board(size)
+    computer_board = create_board(size)
