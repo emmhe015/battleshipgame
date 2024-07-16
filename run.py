@@ -119,3 +119,8 @@ def main():
             if not is_valid_guess(player_guess, size):
                 print("Guess out of bounds! Try again.")
                 continue
+            if make_guess(computer_board, player_guess):
+                print("Hit!")
+            else:
+                print("Miss!")
+            break
