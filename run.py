@@ -89,3 +89,4 @@ def all_ships_sunk(board):
             return False
     return True
 
+def main():
