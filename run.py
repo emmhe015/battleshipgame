@@ -124,7 +124,10 @@ def main():
             else:
                 print("Miss!")
             break
-        
+
         if all_ships_sunk(computer_board):
             print("Player wins!")
             break
+
+        print("\nComputer's Turn:")
+        while True:
