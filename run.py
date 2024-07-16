@@ -132,3 +132,9 @@ def main():
         print("\nComputer's Turn:")
         while True:
             computer_guess = (random.randint(0, size-1), random.randint(0, size-1))
+            if is_valid_guess(computer_guess, size):
+                if make_guess(player_board, computer_guess):
+                    print(f"Computer hits at {computer_guess}!")
+                else:
+                    print(f"Computer misses at {computer_guess}.")
+                break
