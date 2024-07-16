@@ -93,3 +93,6 @@ def main():
     """
     main function to run the Battleships game
     """
+    while True:
+        try:
+            size = int(input("Enter the size of the grid: "))
