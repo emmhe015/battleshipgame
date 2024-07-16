@@ -90,3 +90,6 @@ def all_ships_sunk(board):
     return True
 
 def main():
+    """
+    main function to run the Battleships game
+    """
