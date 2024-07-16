@@ -76,3 +76,6 @@ def make_guess(board, guess):
     elif board[row][col] == "O":
         board[row][col] = "-"
         return False
+
+def all_ships_sunk(board):
+
