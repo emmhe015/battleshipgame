@@ -138,3 +138,7 @@ def main():
                 else:
                     print(f"Computer misses at {computer_guess}.")
                 break
+        
+        if all_ships_sunk(player_board):
+            print("Computer wins!")
+            break
