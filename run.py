@@ -109,3 +109,7 @@ def main():
     num_ships = 3
     place_ships(player_board, size, num_ships)
     place_ships(computer_board, size, num_ships)
+
+    while True:
+        print("\nPlayer's Board:")
+        print_board(player_board)
