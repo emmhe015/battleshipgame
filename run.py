@@ -142,3 +142,6 @@ def main():
         if all_ships_sunk(player_board):
             print("Computer wins!")
             break
+
+if __name__ == "__main__":
+    main()
