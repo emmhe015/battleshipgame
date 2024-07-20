@@ -1,32 +1,41 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Battleships Game
 
-Welcome,
+## Purpose
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **May 14, 2024**
+This Battleships game allows a single player to play against the computer. The objective of the game is to guess the locations of the opponent's ships and sink them all.
 
-## Reminders
+## Features
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+- The user can set the grid size.
+- The game provides feedback for hits and misses.
+- The game handles invalid input gracefully.
+- The game declares the winner once all ships are sunk.
 
-## Creating the Heroku app
+## How to Play
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+1. Run the game.
+2. Enter the desired grid size.
+3. Take turns with the computer to guess the locations of each other's ships.
+4. The game ends when all ships of one player are sunk.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## Deployment
+The site was deployed to GitHub Pages. The steps to deploy are as follows:
+1. In the GitHub repository, navigate to the **Settings** tab.
+2. From the source section drop-down menu, select the **Master Branch**.
+3. Once the master branch has been selected, the page will automatically refresh with a detailed ribbon display to indicate the successful deployment.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+This deployment was deployed using the Code institutes mock terminal for **Heroku**.
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+Steps for deployment:
+  1. Fork or clone this repository
+  
+  2. Create a new heroku app
+  3. Set the buildpacks to python and node.js in that order 
+  4. Link the heroku app to the repository
+  5.  Click on deploy
 
-Connect your GitHub repository and deploy as normal.
 
-## Constraints
+  ## Credits
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
-
-Happy coding!
+  - The deployment section to heroku in README.md is from my last pp3 project, top3popularnames.
+  - The deployment section to github in README.md is from  [This README example](https://github.com/Code-Institute-Solutions/readme-love-maths/blob/master/README.md)
