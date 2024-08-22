@@ -3,7 +3,10 @@ import random
 def create_board(size):
     """
     Creates a game board of given size.
+    
+    Args:
     size (int): The size of the grid.
+    
     Returns:
     list: A 2D list representing the game board.
     """
@@ -22,6 +25,8 @@ def print_board(board):
 def place_ships(board, size, num_ships):
     """
     Places a specified number of ships randomly on the board.
+    
+    Args:
     board (list): The game board to place ships on.
     size (int): The size of the grid.
     num_ships (int): The number of ships to place.
@@ -45,17 +50,20 @@ def place_ships(board, size, num_ships):
                     board[ship_row+i][ship_col] = "S"
                 ships += 1
 
-def get_guess():
+def get_guess(size):
     """
     Prompts the user for a row and column guess.
+    
+    Args:
+    size (int): The size of the grid.
     
     Returns:
     tuple: A tuple containing the row and column guessed by the user.
     """
     while True:
         try:
-            row = int(input("Guess Row: "))
-            col = int(input("Guess Col: "))
+            row = int(input(f"Guess Row (0-{size-1}): "))
+            col = int(input(f"Guess Col (0-{size-1}): "))
             return row, col
         except ValueError:
             print("Invalid input. Please enter integers.")
@@ -63,8 +71,11 @@ def get_guess():
 def is_valid_guess(guess, size):
     """
     Checks if a guess is within the bounds of the grid.
+    
+    Args:
     guess (tuple): A tuple containing the row and column guessed.
     size (int): The size of the grid.
+    
     Returns:
     bool: True if the guess is within bounds, False otherwise.
     """
@@ -74,8 +85,11 @@ def is_valid_guess(guess, size):
 def make_guess(board, guess):
     """
     Processes the user's guess and updates the board.
+    
+    Args:
     board (list): The game board to update.
     guess (tuple): A tuple containing the row and column guessed.
+    
     Returns:
     bool: True if the guess hits a ship, False otherwise.
     """
@@ -90,7 +104,10 @@ def make_guess(board, guess):
 def all_ships_sunk(board):
     """
     Checks if all ships on the board have been sunk.
+    
+    Args:
     board (list): The game board to check.
+    
     Returns:
     bool: True if all ships are sunk, False otherwise.
     """
