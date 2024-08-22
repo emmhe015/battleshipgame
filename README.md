@@ -1,7 +1,7 @@
 # READ ME
 ### Battleship Game
 
-![Battleship Game](assets/images/screenshotBattleshipGame.png)
+![Battleship Game](assets/images/startGame.png)
 
 ## Overview
 This Battleship Game is a command-line game written in Python. Two players, one controlled by the user and the other by the computer, take turns guessing the location of the opponent's ships on a grid. The game dynamically updates the board based on the players' guesses and provides feedback on hits and misses.
@@ -35,14 +35,26 @@ The following table summarizes the testing of the main functionalities of the Ba
 | End Game Condition              | Game ends when all ships of one player are sunk  | Pass            |
 
 ### Additional Testing
-- **Python Code Validation** using [PEP8 online](http://pep8online.com/)
-  - Fixed indentation and spacing issues to comply with PEP8 standards.
+- **Python Code Validation** using [PEP8 online](https://www.codewof.co.nz/style/python3/)
+  - Fixed indentation and spacing issues to comply with PEP8 standards. Got following results;
+![Battleship Game Testing](assets/images/styleError35.png)
+
+![Battleship Game Testing](assets/images/styleError13.png)
+
+![Battleship Game Testing](assets/images/styleError3.png)
+
+- And finally;
+![Battleship Game Testing](assets/images/styleErrorNone.png)
+
 
 - **User Input Validation** 
   - Tested various inputs (out of bounds, non-integer values) to ensure robust handling.
+  ![Battleship Game Validation](assets/images/guessWrong.png)
 
 - **Game Playthrough** 
   - Played multiple rounds to verify the random placement of ships and the integrity of the game logic.
+![Battleship Game Validation](assets/images/computerWins.png)
+
 
 ## Deployment
 The site was deployed to GitHub Pages. The steps to deploy are as follows:
