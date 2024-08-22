@@ -28,12 +28,22 @@ def place_ships(board, size, num_ships):
     """
     ships = 0
     while ships < num_ships:
-        ship_row = random.randint(0, size-1)
-        ship_col = random.randint(0, size-1)
-        if board[ship_row][ship_col] != "S":
-            board[ship_row][ship_col] = "S"
-            ships += 1
-
+        ship_size = random.randint(1, size // 2)
+        direction = random.choice(['H', 'V'])
+        if direction == 'H':
+            ship_row = random.randint(0, size-1)
+            ship_col = random.randint(0, size-ship_size)
+            if "S" not in board[ship_row][ship_col:ship_col+ship_size]:
+                for i in range(ship_size):
+                    board[ship_row][ship_col+i] = "S"
+                ships += 1
+        else:
+            ship_row = random.randint(0, size-ship_size)
+            ship_col = random.randint(0, size-1)
+            if all(board[ship_row+i][ship_col] != "S" for i in range(ship_size)):
+                for i in range(ship_size):
+                    board[ship_row+i][ship_col] = "S"
+                ships += 1
 
 def get_guess():
     """
