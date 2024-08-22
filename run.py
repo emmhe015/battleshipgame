@@ -101,22 +101,24 @@ def all_ships_sunk(board):
 
 def main():
     """
-    main function to run the Battleships game
+    Main function to run the Battleships game.
     """
-while True:
-    try:
-        size = int(input("Enter the size of the grid (minimum 5): "))
-        if size < 5:
-            print("Please enter a size of at least 5.")
-            continue
-        break
-    except ValueError:
-        print("Invalid input. Please enter an integer.")
-
+    while True:
+        try:
+            size = int(input("Enter the size of the grid (minimum 5): "))
+            if size < 5:
+                print("Please enter a size of at least 5.")
+                continue
+            break
+        except ValueError:
+            print("Invalid input. Please enter an integer.")
+    
+    num_ships = size // 2
+    print(f"Placing {num_ships} ships on the board...")
+    
     player_board = create_board(size)
     computer_board = create_board(size)
 
-    num_ships = 3
     place_ships(player_board, size, num_ships)
     place_ships(computer_board, size, num_ships)
 
@@ -125,7 +127,7 @@ while True:
         print_board(player_board)
         print("\nPlayer's Turn:")
         while True:
-            player_guess = get_guess()
+            player_guess = get_guess(size)
             if not is_valid_guess(player_guess, size):
                 print("Guess out of bounds! Try again.")
                 continue
