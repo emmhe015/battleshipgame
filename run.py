@@ -103,15 +103,15 @@ def main():
     """
     main function to run the Battleships game
     """
-    while True:
-        try:
-            size = int(input("Enter the size of the grid: "))
-            if size<= 0:
-                print("Please enter a positive integer.")
-                continue
-            break
-        except ValueError:
-            print("Invalid input. Please enter an integer.")
+while True:
+    try:
+        size = int(input("Enter the size of the grid (minimum 5): "))
+        if size < 5:
+            print("Please enter a size of at least 5.")
+            continue
+        break
+    except ValueError:
+        print("Invalid input. Please enter an integer.")
 
     player_board = create_board(size)
     computer_board = create_board(size)
